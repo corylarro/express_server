@@ -3,6 +3,7 @@ const Campsite = require('../models/campsite');
 
 const campsiteRouter = express.Router();
 
+
 campsiteRouter.route('/')
     .get((req, res, next) => {
         Campsite.find()
@@ -212,5 +213,6 @@ campsiteRouter.route('/:campsiteId/comments/:commentId')
     })
     .catch(err => next(err));
 });
+
 
 module.exports = campsiteRouter;
